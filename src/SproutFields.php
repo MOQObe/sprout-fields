@@ -36,12 +36,12 @@ class SproutFields extends Plugin implements SproutDependencyInterface
     /**
      * @var string
      */
-    public $schemaVersion = '3.5.3';
+    public string $schemaVersion = '3.5.3';
 
     /**
      * @var string
      */
-    public $minVersionRequired = '2.1.3';
+    public string $minVersionRequired = '2.1.3';
 
     /**
      * @inheritdoc
