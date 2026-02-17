@@ -80,7 +80,7 @@ class Address extends Field implements PreviewableFieldInterface
      * @throws SiteNotFoundException
      * @throws \yii\base\Exception
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return SproutBaseFields::$app->addressField->getSettingsHtml($this);
     }
@@ -119,7 +119,7 @@ class Address extends Field implements PreviewableFieldInterface
      *
      * @return AddressModel|mixed|null
      */
-    public function normalizeValue($value, ElementInterface $element = null)
+    public function normalizeValue($value, ElementInterface $element = null): mixed
     {
         return SproutBaseFields::$app->addressField->normalizeValue($this, $value, $element);
     }
@@ -132,7 +132,7 @@ class Address extends Field implements PreviewableFieldInterface
      * @throws Exception
      * @throws StaleObjectException
      */
-    public function afterElementSave(ElementInterface $element, bool $isNew)
+    public function afterElementSave(ElementInterface $element, bool $isNew):void
     {
         SproutBaseFields::$app->addressField->afterElementSave($this, $element, $isNew);
         parent::afterElementSave($element, $isNew);
